@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import {
+  BrowserRouter,
+  Link,
+  Redirect,
+  Route
+} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
