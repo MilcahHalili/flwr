@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {
-  BrowserRouter,
-  Link,
-  Redirect,
   Route
 } from 'react-router-dom';
 import './App.css';
+import Category from './components/Category/Category';
+import Mood from './components/Mood/Mood';
+import Nav from './components/Nav/Nav';
 
 class App extends Component {
   render() {
@@ -15,9 +15,13 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div>
+        </div>
+        <Nav />
+        <div className="App-intro content">
+          <Route path="/category" component={Category} />
+          <Route path="/mood" component={Mood} />
+        </div>
       </div>
     );
   }
