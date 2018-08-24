@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">flwr</h1>
         </header>
         <div>
         </div>
@@ -21,6 +21,9 @@ class App extends Component {
         <div className="App-intro content">
           <Route path="/category" component={Category} />
           <Route path="/mood" component={Mood} />
+        </div>
+        <div className="App-footer">
+          <h2>made w <span role="img" alt="green-heart">💚</span><br />by<a href="https://www.linkedin.com/in/milcah-halili"><button className="mc">milcah halili</button></a></h2>
         </div>
       </div>
     );
