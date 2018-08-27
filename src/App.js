@@ -1,30 +1,55 @@
 import React, { Component } from 'react';
 import {
-  Route
+  BrowserRouter,
+  Switch,
+  Route,
 } from 'react-router-dom';
-import './App.css';
-import Category from './components/Category/Category';
-import Mood from './components/Mood/Mood';
-import Nav from './components/Nav/Nav';
+import HomeView from './views/HomeView/HomeView';
+import LogInView from './views/LogInView/LogInView';
+import SignUpView from './views/SignUpView/SignUpView';
+import userServ from './utils/userServ';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  /*--- cb methods ---*/
+
+  handleSignUp = () => {
+    this.setState({ user: userServ.getUser() });
+  }
+
+  /*--- lifecycle methods ---*/
+
+  componentDidMount() {
+    let user = userServ.getUser();
+    this.setState({ user });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">flwr</h1>
-        </header>
-        <div>
-        </div>
-        <Nav />
-        <div className="App-intro content">
-          <Route path="/category" component={Category} />
-          <Route path="/mood" component={Mood} />
-        </div>
-        <div className="App-footer">
-          <h2>made w <span role="img" aria-label="green-heart">💚</span><br />by <a href="https://www.linkedin.com/in/milcah-halili"><button className="mc">milcah halili</button></a></h2>
-        </div>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" render={
+            () =>
+              <HomeView />
+          } />
+          <Route exact path='/login' render={(props) =>
+            <LogInView
+              {...props}
+              handleLogin={this.handleLogin}
+            />
+          } />
+          <Route exact path='/signup' render={
+            (props) =>
+              <SignUpView
+                {...props}
+                handleSignUp={this.handleSignUp}
+              />
+          } />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

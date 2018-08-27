@@ -1,4 +1,4 @@
-const BASE_URL = 'api/users/';
+const BASE_URL = '/api/users/';
 
 function signup(user) {
   return fetch(BASE_URL + 'signup', {
@@ -8,7 +8,7 @@ function signup(user) {
   })
   .then(res => {
     if (res.ok) return res.json();
-    throw new Error('Your emails is already in use.');
+    throw new Error('Your email is already in use.');
   })
   .then(({token}) => token);
 }

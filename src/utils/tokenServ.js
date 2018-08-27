@@ -1,4 +1,4 @@
-function setToken(t) {
+function setToken(token) {
   if (token) {
     localStorage.setItem('token', token);
   } else {

@@ -2,7 +2,7 @@ var User = require('../models/user');
 var jwt = require('jsonwebtoken');
 var SECRET = process.env.SECRET;
 
-function signUp(req, res) {
+function signup(req, res) {
   var user = new User(req.body);
   user.save()
     .then(user => {
@@ -12,7 +12,7 @@ function signUp(req, res) {
     .catch(err => res.status(400).json(err));
 }
 
-function logIn(req, res) {
+function login(req, res) {
   User.findOne({email: req.body.email}).exec().then(user => {
     if (!user) return res.status(401).json({err: 'Credentials no bueno.'});
     user.comparePassword(req.body.pw, (err, isMatch) => {
