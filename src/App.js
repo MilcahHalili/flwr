@@ -17,6 +17,10 @@ class App extends Component {
     this.setState({ user: userServ.getUser() });
   }
 
+  handleLogin = () => {
+    this.setState({user: userService.getUser()});
+  }
+
   /*--- lifecycle methods ---*/
 
   componentDidMount() {
