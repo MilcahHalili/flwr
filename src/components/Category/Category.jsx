@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default (props) => (
+export default () => (
   <div>
     <h2 className="App-h2">choose your favorite strains</h2>
     <button className="sativa">sativa</button>

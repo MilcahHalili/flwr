@@ -8,6 +8,8 @@ import HomeView from './views/HomeView/HomeView';
 import LogInView from './views/LogInView/LogInView';
 import SignUpView from './views/SignUpView/SignUpView';
 import userServ from './utils/userServ';
+import Mood from './components/Mood/Mood';
+import Category from './components/Category/Category';
 
 class App extends Component {
 
@@ -18,7 +20,7 @@ class App extends Component {
   }
 
   handleLogin = () => {
-    this.setState({user: userService.getUser()});
+    this.setState({user: userServ.getUser()});
   }
 
   /*--- lifecycle methods ---*/
@@ -34,8 +36,10 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render={
             () =>
-              <HomeView />
+            <HomeView />
           } />
+                <Route exact path='/category' component={Category} />
+                <Route exact path='/mood' component={Mood} />
           <Route exact path='/login' render={(props) =>
             <LogInView
               {...props}
