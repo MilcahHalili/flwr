@@ -15,21 +15,15 @@ var userSchema = new mongoose.Schema({
     unique: true
   },
   password: {
-    String,
+    type: String,
     required: true
   },
   zipcode: {
     type: Number,
     required: true
   },
-  strains: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Strain'
-  }],
-  dispensaries: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Dispensary'
-  }]
+  strains: String,
+  dispensaries: String
 }, {
   timestamps: true
 });
