@@ -25,7 +25,7 @@ class SignUpForm extends Component {
     e.preventDefault();
     userServ.signup(this.state)
     .then(() => {
-      this.props.handSignUp();
+      this.props.handleSignUp();
       this.props.history.push('/');
     })
     .catch(err => this.props.updateMsg(err.message));
