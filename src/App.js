@@ -10,9 +10,6 @@ import SignUpView from './views/SignUpView/SignUpView';
 import userServ from './utils/userServ';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   /*--- cb methods ---*/
 
