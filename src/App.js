@@ -10,6 +10,8 @@ import SignUpView from './views/SignUpView/SignUpView';
 import userServ from './utils/userServ';
 import Mood from './components/Mood/Mood';
 import Category from './components/Category/Category';
+import './App.css';
+import './components/Btns/Btns.css';
 
 class App extends Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (props) => (
+export default () => (
   <div>
     <h2 className="App-h2">choose your desired mood</h2>
     <button className="happy">happy</button>
