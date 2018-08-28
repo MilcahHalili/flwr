@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from '../../components/Nav/Nav';
 import './HomeView.css';
 
 const HomeView = () => {

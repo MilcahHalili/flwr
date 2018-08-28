@@ -9,8 +9,8 @@ class SignUpForm extends Component {
       name: '',
       email: '',
       countryCode: '+1',
-      mobilePhone: '',
-      pw: '',
+      phone: '',
+      password: '',
       pwConfirm: '',
       zipcode: ''
     };
@@ -36,7 +36,7 @@ class SignUpForm extends Component {
   isFormInvalid() {
     return !(this.state.name
       && this.state.email
-      && this.state.pw
+      && this.state.password
       === this.state.pwConfirm);
   }
 
@@ -65,12 +65,12 @@ class SignUpForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
-              <input type="text" className="form-control" placeholder="Mobile Phone" value={this.state.mobilePhone} onChange={(e) => this.handleChange('mobilePhone', e)} />
+              <input type="text" className="form-control" placeholder="Mobile Phone" value={this.state.phone} onChange={(e) => this.handleChange('phone', e)} />
             </div>
           </div>
           <div className="form-group">
             <div className="col-sm-12">
-              <input type="password" className="form-control" placeholder="Password" value={this.state.pw} onChange={(e) => this.handleChange('pw', e)} />
+              <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={(e) => this.handleChange('password', e)} />
             </div>
           </div>
           <div className="form-group">

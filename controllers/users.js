@@ -15,7 +15,7 @@ function signup(req, res) {
 function login(req, res) {
   User.findOne({email: req.body.email}).exec().then(user => {
     if (!user) return res.status(401).json({err: 'Credentials no bueno.'});
-    user.comparePassword(req.body.pw, (err, isMatch) => {
+    user.comparePassword(req.body.password, (err, isMatch) => {
       if (isMatch) {
         res.json({token: createJWT(user)});
       } else {

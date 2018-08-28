@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer';
 import HomeView from './views/HomeView/HomeView';
 import LogInView from './views/LogInView/LogInView';
 import SignUpView from './views/SignUpView/SignUpView';
@@ -16,6 +17,12 @@ import './App.css';
 import './components/Btns/Btns.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      user: null
+    };
+  }
 
   /*--- cb methods ---*/
 
@@ -39,7 +46,7 @@ class App extends Component {
       <BrowserRouter>
         <React.Fragment>
           <Header />
-          <Nav />
+          <Nav user={this.state.user} />
           <Switch>
             <Route exact path="/" render={
               () =>
@@ -61,6 +68,7 @@ class App extends Component {
                 />
             } />
           </Switch>
+          <Footer />
         </React.Fragment>
       </BrowserRouter>
     );
