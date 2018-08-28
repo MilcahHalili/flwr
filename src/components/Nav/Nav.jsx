@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, } from 'react-router-dom';
 
 const Nav = (props) => {
   let nav = props.user ?
     <div>
       <span className='Nav-welcome'>High, {props.user.name}! 👋🏽</span>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <br />
       <Link to='/category' className='Nav-link' >category</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to='/mood' className='Nav-link' >mood</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <Link to="" className='Nav-link' onClick={props.handleLogout} >log out</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+      <br />
+      <Link to='' className='Nav-link' onClick={props.handleLogout}>log out</Link>
     </div>
     :
     <div>
