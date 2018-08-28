@@ -9,6 +9,9 @@
 # production
 /build
 
+# send_sms.js
+/send_sms.js
+
 # misc
 .DS_Store
 .env.local
