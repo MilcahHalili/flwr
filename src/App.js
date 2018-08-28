@@ -34,6 +34,11 @@ class App extends Component {
     this.setState({ user: userServ.getUser() });
   }
 
+  handleLogout = () => {
+    userServ.logout();
+    this.setState({user: null});
+  }
+
   /*--- lifecycle methods ---*/
 
   componentDidMount() {
@@ -46,7 +51,10 @@ class App extends Component {
       <BrowserRouter>
         <React.Fragment>
           <Header />
-          <Nav user={this.state.user} />
+          <Nav
+          user={this.state.user}
+          handleLogout={this.handleLogout}
+          />
           <Switch>
             <Route exact path="/" render={
               () =>
