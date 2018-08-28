@@ -1,15 +1,10 @@
 import React from 'react';
 import Nav from '../../components/Nav/Nav';
 import './HomeView.css';
-import Header from '../../components/Header/Header';
 
 const HomeView = () => {
   return (
     <div className="App">
-      <Header />
-      <Nav />
-      <div className="App-intro content">
-      </div>
       <div>
 
       </div>

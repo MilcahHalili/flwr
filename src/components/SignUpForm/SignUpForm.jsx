@@ -8,6 +8,8 @@ class SignUpForm extends Component {
     this.state = {
       name: '',
       email: '',
+      countryCode: '+1',
+      mobilePhone: '',
       pw: '',
       pwConfirm: '',
       zipcode: ''
@@ -55,6 +57,19 @@ class SignUpForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+              <select className="form-control" default="USA" value={this.state.countryCode} onChange={(e) => this.handleChange('countryCode', e)}>
+                <option value="+1">USA</option>
+                <option value="+1">CANADA</option>
+              </select>
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="col-sm-12">
+              <input type="text" className="form-control" placeholder="Mobile Phone" value={this.state.mobilePhone} onChange={(e) => this.handleChange('mobilePhone', e)} />
+            </div>
+          </div>
+          <div className="form-group">
+            <div className="col-sm-12">
               <input type="password" className="form-control" placeholder="Password" value={this.state.pw} onChange={(e) => this.handleChange('pw', e)} />
             </div>
           </div>
@@ -65,7 +80,7 @@ class SignUpForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
-              <input type="password" className="form-control" placeholder="Zip Code" value={this.state.zipcode} onChange={(e) => this.handleChange('zipcode', e)} />
+              <input type="text" className="form-control" placeholder="Zip Code" value={this.state.zipcode} onChange={(e) => this.handleChange('zipcode', e)} />
             </div>
           </div>
           <div className="form-group">
