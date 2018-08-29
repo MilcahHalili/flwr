@@ -81,7 +81,7 @@ class App extends Component {
                   handleSignUp={this.handleSignUp}
                 />
             } />
-            <Route exact path='/createdispensary' render={
+            <Route exact path='/dispensary' render={
               (props) =>
                 <AddDispensaryView
                   {...props}

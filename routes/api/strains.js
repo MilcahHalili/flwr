@@ -3,7 +3,7 @@ var router = express.Router();
 var strainsCtrl = require('../../controllers/strains');
 
 /*--- Public Routes ---*/
-router.post('/', strainsCtrl.create);
+router.post('/createstrain', strainsCtrl.create);
 router.post('/:id', strainsCtrl.show);
 
 module.exports = router;
