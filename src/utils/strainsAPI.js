@@ -16,30 +16,30 @@ const StrainsAPI = {
     },
     {
       id: 3,
-      name: "Harborside",
-      moods: "Oakland",
-      categories: "",
+      name: "Jack Herer",
+      moods: "happy",
+      categories: "sativa",
       dispensaries: ""
     },
     {
       id: 4,
-      name: "Magnolia Oakland",
-      moods: "Oakland",
-      categories: "",
+      name: "Rock Bud",
+      moods: "sleepy",
+      categories: "indica",
       dispensaries: ""
     },
     {
       id: 5,
-      name: "Sparc",
-      moods: "San Francisco",
-      categories: "",
+      name: "Blueberry Pie",
+      moods: "hungry",
+      categories: "hybrid",
       dispensaries: ""
     },
     {
       id: 6,
-      name: "Barbary Coast",
-      moods: "San Francisco",
-      categories: "",
+      name: "Purple Chemdawg",
+      moods: "happy",
+      categories: "indica",
       dispensaries: ""
     }
   ],
