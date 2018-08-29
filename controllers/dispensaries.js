@@ -28,7 +28,7 @@ function createStock(req, res) {
   });
 }
 
-function deleteStock(req, res) {
+function removeStock(req, res) {
   Dispensary.findById(req.params.dispensaryId, (err, dispensary) => {
     dispensary.strains.remove(req.params.strainId);
     dispensary.save(() => {
@@ -46,5 +46,5 @@ module.exports = {
   create,
   show,
   createStock,
-  deleteStock
+  removeStock
 }
