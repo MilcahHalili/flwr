@@ -11,8 +11,8 @@ class DispensaryForm extends Component {
   }
 
   handleChange = (field, e) => {
-    this.props.updateMsg('');
     this.setState({
+      // Using ES2015 Computed Property Names
       [field]: e.target.value
     });
   }
@@ -22,7 +22,7 @@ class DispensaryForm extends Component {
     dispenServ.addDispen(this.state)
     .then(() => {
       this.props.handleAddDispen();
-      this.props.history.push('/');
+      this.props.history.push('/:id');
     })
     .catch(err => this.props.updateMsg(err.message));
   }

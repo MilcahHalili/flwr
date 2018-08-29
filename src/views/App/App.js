@@ -16,7 +16,7 @@ import Category from '../../components/Category/Category';
 import './App.css';
 import '../../components/Btns/Btns.css';
 import dispenServ from '../../utils/dispenServ';
-import AddDispensaryView from '../AddDispensaryView/AddDispensaryView';
+import Dispensary from '../../components/Dispensary/Dispensary';
 
 class App extends Component {
   constructor() {
@@ -81,11 +81,10 @@ class App extends Component {
                   handleSignUp={this.handleSignUp}
                 />
             } />
-            <Route exact path='/dispensary' render={
+            <Route path='/dispensary/:id' render={
               (props) =>
-                <AddDispensaryView
+                <Dispensary
                   {...props}
-                  handleAddDispen={this.handleAddDispen}
                 />
             } />
           </Switch>

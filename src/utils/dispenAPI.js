@@ -1,4 +1,4 @@
-const BASE_URL = '/api/dispensaries';
+const BASE_URL = '/api/dispensaries/';
 
 function addDispen(dispen) {
   return fetch(BASE_URL, {
