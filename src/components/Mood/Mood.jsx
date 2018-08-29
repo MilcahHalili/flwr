@@ -10,6 +10,6 @@ export default () => (
     <button className="happy">energized</button>
     <button className="giggly">creative</button>
     <button className="calm">aroused</button>
-    <button className="sleepy">relieved</button>
+    <button className="sleepy">relaxed</button>
   </div>
-);
+)
