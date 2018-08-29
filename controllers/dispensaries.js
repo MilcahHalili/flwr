@@ -1,4 +1,4 @@
-var Dispensary = require('../models/');
+var Dispensary = require('../models/dispensary');
 var Strain = require('../models/strain');
 
 function create(req, res) {

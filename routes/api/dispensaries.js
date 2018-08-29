@@ -3,9 +3,9 @@ var router = express.Router();
 var dispensariesCtrl = require('../../controllers/dispensaries');
 
 /*--- Public Routes ---*/
-router.post('/createdispensary', dispensariesCtrl.create);
+router.post('/', dispensariesCtrl.create);
 router.get('/:id', dispensariesCtrl.show);
 router.post('/:dispensaryId/strains/:strainId', dispensariesCtrl.createStock);
-router.delete('/:dispensaryId/strains/:strainId', dispensariesCtrl.removeeStock);
+router.delete('/:dispensaryId/strains/:strainId', dispensariesCtrl.removeStock);
 
 module.exports = router;

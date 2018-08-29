@@ -15,6 +15,8 @@ import Mood from '../../components/Mood/Mood';
 import Category from '../../components/Category/Category';
 import './App.css';
 import '../../components/Btns/Btns.css';
+import dispenServ from '../../utils/dispenServ';
+import AddDispensaryView from '../AddDispensaryView/AddDispensaryView';
 
 class App extends Component {
   constructor() {
@@ -37,6 +39,10 @@ class App extends Component {
   handleLogout = () => {
     userServ.logout();
     this.setState({user: null});
+  }
+
+  handleAddDispen = () => {
+    this.setState({ dipensary: dispenServ.addDispen() });
   }
 
   /*--- lifecycle methods ---*/
@@ -73,6 +79,13 @@ class App extends Component {
                 <SignUpView
                   {...props}
                   handleSignUp={this.handleSignUp}
+                />
+            } />
+            <Route exact path='/createdispensary' render={
+              (props) =>
+                <AddDispensaryView
+                  {...props}
+                  handleAddDispen={this.handleAddDispen}
                 />
             } />
           </Switch>

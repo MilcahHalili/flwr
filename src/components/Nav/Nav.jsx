@@ -10,6 +10,8 @@ const Nav = (props) => {
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to='/mood' className='Nav-link' >mood</Link>
       <br />
+      <Link to='/createdispensary' className='Nav-link' >add dispensary</Link>
+      <br />
       <Link to='' className='Nav-link' onClick={props.handleLogout}>log out</Link>
     </div>
     :

@@ -8,7 +8,7 @@ function signup(user) {
   })
   .then(res => {
     if (res.ok) return res.json();
-    throw new Error('Your email is already in use.');
+    throw new Error('Invalid sign up.');
   })
   .then(({token}) => token);
 }
@@ -21,7 +21,7 @@ function login(user) {
   })
   .then(res => {
     if (res.ok) return res.json();
-    throw new Error('Bad credentials');
+    throw new Error('Credentials no bueno.');
   })
   .then(({token}) => token);
 }
@@ -29,4 +29,4 @@ function login(user) {
 export default {
   signup,
   login
-};
+}
