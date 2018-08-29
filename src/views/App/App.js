@@ -18,6 +18,7 @@ import '../../components/Btns/Btns.css';
 import dispenServ from '../../utils/dispenServ';
 import Dispensary from '../../components/Dispensary/Dispensary';
 import Dispensaries from '../../components/Dispensaries/Dispensaries';
+import Strain from '../../components/Strain/Strain';
 
 class App extends Component {
   constructor() {
@@ -91,6 +92,12 @@ class App extends Component {
             <Route exact path='/dispensary/:id' render={
               (props) =>
                 <Dispensary
+                  {...props}
+                />
+            } />
+            <Route exact path='/strain/:id' render={
+              (props) =>
+                <Strain
                   {...props}
                 />
             } />

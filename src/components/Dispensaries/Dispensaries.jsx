@@ -8,7 +8,7 @@ const Dispensaries = () => (
       {
         DispensaryAPI.all().map(d => (
           <li key={d.id}>
-            <Link to={`/roster/${d.id}`}>{d.name}</Link>
+            <Link to={`/dispensary/${d.id}`}>{d.name}</Link>
           </li>
         ))
       }

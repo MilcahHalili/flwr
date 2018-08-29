@@ -43,10 +43,10 @@ const StrainsAPI = {
       dispensaries: ""
     }
   ],
-  all: function () { return this.dispensaries },
+  all: function () { return this.strains },
   get: function (id) {
-    const isDispen = d => d.id === id
-    return this.dispensaries.find(isDispen)
+    const isStrain = d => d.id === id
+    return this.strains.find(isStrain)
   }
 }
 
