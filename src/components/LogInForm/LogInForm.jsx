@@ -7,7 +7,7 @@ class LogInForm extends Component {
     super(props);
     this.state = {
       email: '',
-      pw: ''
+      password: ''
     }
   }
 
@@ -26,7 +26,7 @@ class LogInForm extends Component {
         this.props.history.push('/');
       })
       // invalid credentials - don't alert in YOUR app :)
-      .catch(err => alert('Invalid Credentials!'));
+      .catch(err => alert('Credentials no bueno.'));
   }
 
   render() {
@@ -41,7 +41,7 @@ class LogInForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
-              <input type="password" className="form-control" placeholder="Password" value={this.state.pw} onChange={(e) => this.handleChange('pw', e)} />
+              <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={(e) => this.handleChange('password', e)} />
             </div>
           </div>
           <div className="form-group">
