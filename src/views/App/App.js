@@ -20,12 +20,15 @@ import Dispensary from '../../components/Dispensary/Dispensary';
 import Dispensaries from '../../components/Dispensaries/Dispensaries';
 import Strain from '../../components/Strain/Strain';
 import Strains from '../../components/Strains/Strains';
+import strainServ from '../../utils/strainServ';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: null
+      user: null,
+      dispensary: this.dispensary,
+      mood: this.mood
     };
   }
 
@@ -46,6 +49,10 @@ class App extends Component {
 
   handleAddDispen = () => {
     this.setState({ dipensary: dispenServ.addDispen() });
+  }
+
+  handleHappy = () => {
+    this.setState({ mood: strainServ.filterHappy() });
   }
 
   /*--- lifecycle methods ---*/
@@ -70,7 +77,13 @@ class App extends Component {
                 <HomeView />
             } />
             <Route exact path='/category' component={Category} />
-            <Route exact path='/mood' component={Mood} />
+            <Route exact path='/mood' // render={(props) =>
+              component={Mood}
+              // <Mood
+              //   {...props}
+              //   handleHappy={this.handleHappy}
+              />
+            {/* } /> */}
             <Route exact path='/login' render={(props) =>
               <LogInView
                 {...props}
