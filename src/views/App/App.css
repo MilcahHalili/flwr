@@ -1,44 +1,46 @@
-.App {
-  text-align: center;
-  margin: 0 auto;
-  width: 94%;
-}
-
-.App-header {
-  color: #FFFFFF;
-}
-
-#App-wrapper {
-  height: -100%;
-  position: relative;
-}
-
-.App-footer {
-  color: #FFFFFF;
-  padding-top: 65px;
-  bottom: 0;
-  width: 100%;
-}
-
-.App-footer a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.App-title {
-  font-size: 6em;
-}
-
-.App-h2 {
+.h2 {
   color: #FFFFFF;
   font-size: 3em;
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+.Index-div {
+  padding-top: 2.5%;
+  padding-right: 3.5%;
+  margin: auto;
+  text-align: center;
 }
 
-/* input { 
-  -webkit-appearance: push-button;
-  -moz-appearance: button;
-} */
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.Index-ul {
+  list-style-type: none;
+}
+
+li {
+  padding: .15%;
+}
+
+.cross {
+  color: transparent;  
+  text-shadow: 0 0 0 rgb(75,204,40,1);
+  font-size: 3em;
+  margin-bottom: 1%;
+}
+
+.herb {
+  font-size: 3em;
+  margin-bottom: 1%;
+}
+
+.Strain-div {
+  text-align: center;
+}
+
+.Strain-p {
+  font-size: 1.5em;
+}

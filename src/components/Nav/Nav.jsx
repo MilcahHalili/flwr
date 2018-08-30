@@ -1,30 +1,36 @@
 import React from 'react';
 import { Link, } from 'react-router-dom';
+import './Nav.css';
 
 const Nav = (props) => {
   let nav = props.user ?
     <div>
-      <span className='Nav-welcome'>High, {props.user.name}! 👋🏽</span>
+      <span role="img" aria-label="brown hand waving" className="Nav-welcome">High, {props.user.name}! 👋🏽</span>
       <br />
-      <Link to='/category' className='Nav-link' >category</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <Link to='/mood' className='Nav-link' >mood</Link>
-      <br />
-      <Link to='/strains' className='Nav-link' >strains</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <Link to='/dispensaries' className='Nav-link' >dispensaries</Link>
-      <br />
-      <Link to='' className='Nav-link' onClick={props.handleLogout}>log out</Link>
+      <div className="Nav-div">
+        <nav className="Nav-bar">
+          <Link to='/category' className='Nav-link' >category</Link>
+          <Link to='/mood' className='Nav-link' >mood</Link>
+          <br />
+          <Link to='/strains' className='Nav-link' >strains</Link>
+          <Link to='/dispensaries' className='Nav-link' >dispensaries</Link>
+          <br />
+          <Link to='' className='Nav-link' onClick={props.handleLogout}>log out</Link>
+        </nav>
+      </div>
     </div>
     :
     <div>
-      <Link to='/login' className='Nav-link'>log in</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <Link to='/signup' className='Nav-link'>sign up</Link>
-    </div>;
+      <div className="Nav-div">
+        <nav className="Nav-bar">
+          <Link to='/login' className='Nav-link'>log in</Link>
+          <Link to='/signup' className='Nav-link'>sign up</Link>
+        </nav>
+      </div>
+    </div >;
 
   return (
-    <div className='Nav'>
+    <div className="Nav">
       {nav}
     </div>
   );

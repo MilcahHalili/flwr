@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import userServ from '../../utils/userServ';
+import '../Form/Form.css';
 
 class SignUpForm extends Component {
   constructor(props) {
@@ -42,51 +42,49 @@ class SignUpForm extends Component {
 
   render() {
     return (
-      <div>
-        <header className="header-footer">Sign Up</header>
+      <div className="Form-div">
+        <header className="Form-header">sign up</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
-          <div className="form-group">
+          <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" className="form-control" placeholder="Name" value={this.state.name} onChange={(e) => this.handleChange('name', e)} />
+              <input type="text" className="Form-control" placeholder="Name" value={this.state.name} onChange={(e) => this.handleChange('name', e)} />
             </div>
           </div>
-          <div className="form-group">
+          <div className="Form-group">
             <div className="col-sm-12">
-              <input type="email" className="form-control" placeholder="Email" value={this.state.email} onChange={(e) => this.handleChange('email', e)} />
+              <input type="email" className="Form-control" placeholder="Email" value={this.state.email} onChange={(e) => this.handleChange('email', e)} />
             </div>
           </div>
-          <div className="form-group">
+          <div className="Form-group">
             <div className="col-sm-12">
-              <select className="form-control" default="USA" value={this.state.countryCode} onChange={(e) => this.handleChange('countryCode', e)}>
+              <select className="Form-control" value={this.state.countryCode} onChange={(e) => this.handleChange('countryCode', e)}>
                 <option value="+1">USA</option>
-                <option value="+1">CANADA</option>
               </select>
             </div>
           </div>
-          <div className="form-group">
+          <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" className="form-control" placeholder="Mobile Phone" value={this.state.phone} onChange={(e) => this.handleChange('phone', e)} />
+              <input type="text" className="Form-control" placeholder="Mobile Phone" value={this.state.phone} onChange={(e) => this.handleChange('phone', e)} />
             </div>
           </div>
-          <div className="form-group">
+          <div className="Form-group">
             <div className="col-sm-12">
-              <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={(e) => this.handleChange('password', e)} />
+              <input type="password" className="Form-control" placeholder="Password" value={this.state.password} onChange={(e) => this.handleChange('password', e)} />
             </div>
           </div>
-          <div className="form-group">
+          <div className="Form-group">
             <div className="col-sm-12">
-              <input type="password" className="form-control" placeholder="Confirm Password" value={this.state.pwConfirm} onChange={(e) => this.handleChange('pwConfirm', e)} />
+              <input type="password" className="Form-control" placeholder="Confirm Password" value={this.state.pwConfirm} onChange={(e) => this.handleChange('pwConfirm', e)} />
             </div>
           </div>
-          <div className="form-group">
+          <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" className="form-control" placeholder="Zip Code" value={this.state.zipcode} onChange={(e) => this.handleChange('zipcode', e)} />
+              <input type="text" className="Form-control" placeholder="Zip Code" value={this.state.zipcode} onChange={(e) => this.handleChange('zipcode', e)} />
             </div>
           </div>
-          <div className="form-group">
-            <div className="col-sm-12 text-center">
-              <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+          <div className="Form-group">
+            <div className="">
+              <button className="Form-submit-btn" disabled={this.isFormInvalid()}>sign up</button>&nbsp;&nbsp;
             </div>
           </div>
         </form>

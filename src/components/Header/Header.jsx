@@ -1,7 +1,8 @@
 import React from 'react';
+import './Header.css';
 
 export default () => (
-  <header className="App-header">
-    <h1 className="App-title">flwr</h1>
+  <header className="Header">
+    <h1 className="Header-title">flwr</h1>
   </header>
 )

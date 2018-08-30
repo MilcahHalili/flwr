@@ -1,0 +1,23 @@
+.Nav {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.Nav-welcome {
+  font-size: 2em;
+  color: #FFFFFF;
+}
+
+.Nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.85%;
+  line-height: 1.75em;
+  font-weight: 900;
+  font-size: 1.5em;
+  letter-spacing: .125em;
+}
+
+.Nav-div {
+  padding-top: 0.75em;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import DispensaryAPI from '../../utils/dispenAPI';
+import '../../views/App/App.css';
 
 const Dispensary = (props) => {
   const dispensary = DispensaryAPI.get(
@@ -9,11 +10,11 @@ const Dispensary = (props) => {
     return <div>Sorry, but the dispensary was not found.</div>
   }
   return (
-    <div>
-      <h2>{dispensary.name}</h2>
-      <h3>Address:<br />
-      {dispensary.address}</h3>
-      <p>Strains:<br />
+    <div className="Strain-div">
+      <h2 className="h2">{dispensary.name}</h2>
+      <p className="Strain-p">Address:<br />
+      {dispensary.address}</p>
+      <p className="Strain-p">Strains:<br />
       {dispensary.strains}</p>
     </div>
   )

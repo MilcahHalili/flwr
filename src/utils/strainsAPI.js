@@ -3,9 +3,14 @@ const StrainsAPI = {
     {
       id: 1,
       name: "Wedding Cake",
-      moods: "relaxed",
+      moods:
+        ["relaxed, ",
+         "happy"
+        ],
       categories: "hybrid",
-      dispensaries: "California Caregivers Alliance"
+      dispensaries: "California Caregivers Alliance",
+      strainURL: "",
+      dispenURL: ""
     },
     {
       id: 2,
@@ -19,7 +24,9 @@ const StrainsAPI = {
       name: "Jack Herer",
       moods: "happy",
       categories: "sativa",
-      dispensaries: ""
+      dispensaries: "",
+      strainURL: "",
+      dispenURL: ""
     },
     {
       id: 4,

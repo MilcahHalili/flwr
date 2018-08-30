@@ -1,0 +1,16 @@
+.Footer {
+  padding-top: 65px;
+  bottom: 0;
+  width: 100%;
+}
+
+.Footer a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.Footer-h2 {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1.75em;
+}

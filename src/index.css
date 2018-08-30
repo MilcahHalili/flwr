@@ -17,3 +17,7 @@ html {
 *:after {
   box-sizing: border-box;
 }
+
+* {
+  color: #FFFFFF;
+}

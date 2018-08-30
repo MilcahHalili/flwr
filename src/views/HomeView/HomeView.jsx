@@ -3,7 +3,7 @@ import './HomeView.css';
 
 const HomeView = () => {
   return (
-    <div className="App">
+    <div className="HomeView">
       <div>
         Get notified when<br />
         your favorite strains drop in<br />

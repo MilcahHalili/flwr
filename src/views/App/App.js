@@ -15,12 +15,10 @@ import Mood from '../../components/Mood/Mood';
 import Category from '../../components/Category/Category';
 import './App.css';
 import '../../components/Btns/Btns.css';
-import dispenServ from '../../utils/dispenServ';
 import Dispensary from '../../components/Dispensary/Dispensary';
 import Dispensaries from '../../components/Dispensaries/Dispensaries';
 import Strain from '../../components/Strain/Strain';
 import Strains from '../../components/Strains/Strains';
-import strainServ from '../../utils/strainServ';
 
 class App extends Component {
   constructor() {
@@ -47,13 +45,13 @@ class App extends Component {
     this.setState({user: null});
   }
 
-  handleAddDispen = () => {
-    this.setState({ dipensary: dispenServ.addDispen() });
-  }
+  // handleAddDispen = () => {
+  //   this.setState({ dipensary: dispenServ.addDispen() });
+  // }
 
-  handleHappy = () => {
-    this.setState({ mood: strainServ.filterHappy() });
-  }
+  // handleHappy = () => {
+  //   this.setState({ mood: strainServ.filterHappy() });
+  // }
 
   /*--- lifecycle methods ---*/
 
@@ -77,13 +75,7 @@ class App extends Component {
                 <HomeView />
             } />
             <Route exact path='/category' component={Category} />
-            <Route exact path='/mood' // render={(props) =>
-              component={Mood}
-              // <Mood
-              //   {...props}
-              //   handleHappy={this.handleHappy}
-              />
-            {/* } /> */}
+            <Route exact path="/mood" component={Mood}/>
             <Route exact path='/login' render={(props) =>
               <LogInView
                 {...props}
