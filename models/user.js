@@ -30,8 +30,8 @@ var userSchema = new Schema({
     required: true,
   },
   zipcode: Number,
-  strains: String,
-  dispensaries: String
+  strains: [{type: Schema.Types.ObjectId, ref: 'Strain'}],
+  dispensaries: [{type: Schema.Types.ObjectId, ref: 'Dispensary'}]
 }, {
     timestamps: true
 });

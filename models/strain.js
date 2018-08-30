@@ -6,16 +6,9 @@ var strainSchema = new Schema({
     type: String,
     required: true
   },
-  category: String,
-  mood: String,
-  dispensaries: {
-    type: String,
-    required: true
-  }, // [{type: Schema.Types.ObjectId, ref: 'Dispensary'}]
-  liked: {
-    type: Boolean,
-    default: false
-  } // [{type: Schema.Types.ObjectId, ref: 'Dispensary'}]
+  categories: [String],
+  moods: [String],
+  infoURL: String
 }, {
     timestamps: true
 });

@@ -6,6 +6,7 @@ function signup(req, res) {
   var user = new User(req.body);
   user.save()
     .then(user => {
+      // sms message
       res.json({token: createJWT(user)});
     })
     // Error handler if data invalid i.e. duplicate email

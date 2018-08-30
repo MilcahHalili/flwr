@@ -13,7 +13,14 @@ function create(req, res) {
   })
 }
 
+function forMoods(req, res) {
+  Strain.find({moods: req.body.moods}, (err, strains) => {
+    res.json(strains);
+  });
+}
+
 module.exports = {
   create,
-  show
+  show,
+  forMoods
 }

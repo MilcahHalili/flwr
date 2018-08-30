@@ -36,7 +36,7 @@ class SendMsgForm extends Component {
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" name="message" placeholder="Write your message here." className="Form-control-sendMsg" value={this.state.message} onChange={(e) => this.handleChange('message', e)} />
+              <textarea type="text" name="message" placeholder="Write your message here." className="Form-control-sendMsg" value={this.state.message} onChange={(e) => this.handleChange('message', e)} />
             </div>
           </div>
           <div className="Form-group">
@@ -51,27 +51,3 @@ class SendMsgForm extends Component {
 };
 
 export default SendMsgForm;
-
-// extends layout
-
-// block content
-//   h1 SMS Notifications
-
-//   p.
-//     Use this form to send MMS notifications to any subscribers.
-
-//   form(action='/message/send', method='POST')
-
-//     // The text of the message to send
-//     .form-group
-//       label(for='message') Enter a message
-//       input.form-control(type='text', name='message',
-//         placeholder='Hi there, gorgeous ;)')
-
-//     // An optional image URL
-//     .form-group
-//       label(for='imageUrl') (Optional) Image URL to send in an MMS
-//       input.form-control(type='text', name='imageUrl',
-//         placeholder='http://fake.twilio.com/some_image.png')
-
-//     button.btn.btn-primary(type='submit') Send Yourself a Message!
