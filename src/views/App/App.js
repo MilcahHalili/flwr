@@ -10,7 +10,7 @@ import Footer from '../../components/Footer/Footer';
 import HomeView from '../HomeView/HomeView';
 import LogInView from '../LogInView/LogInView';
 import SignUpView from '../SignUpView/SignUpView';
-import AddMsgView from '../AddMsgView/AddMsgView';
+import SendMsgView from '../SendMsgView/SendMsgView';
 import userServ from '../../utils/userServ';
 import msgServ from '../../utils/msgServ';
 import Mood from '../../components/Mood/Mood';
@@ -121,7 +121,7 @@ class App extends Component {
             } />
             <Route exact path='/send/message' render={
               (props) =>
-                <AddMsgView
+                <SendMsgView
                   {...props}
                   handleSendMsg={this.handleSendMsg}
                 />

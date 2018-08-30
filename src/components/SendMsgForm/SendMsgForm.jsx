@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import msgServ from '../../utils/msgServ';
 import '../Form/Form.css';
 
-class LogInForm extends Component {
+class SendMsgForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -50,7 +50,7 @@ class LogInForm extends Component {
   }
 };
 
-export default LogInForm;
+export default SendMsgForm;
 
 // extends layout
 
