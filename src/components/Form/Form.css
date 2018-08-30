@@ -22,7 +22,19 @@
   background-color: #FCB045;
 }
 
+.Form-control-sendMsg {
+  min-width: 500px;
+  padding: 5%;
+  padding-top: 1%;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  border-radius: 25px;
+  background-color: #FCB045;
+  text-align: center;
+}
+
 ::placeholder {
+  text-align: center;
   color: #FFFFFF;
   background-color: #FCB045;
 }

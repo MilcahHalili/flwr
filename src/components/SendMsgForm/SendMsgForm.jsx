@@ -36,7 +36,7 @@ class SendMsgForm extends Component {
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" name="message" placeholder="Write your message here." className="Form-control" value={this.state.message} onChange={(e) => this.handleChange('message', e)} />
+              <input type="text" name="message" placeholder="Write your message here." className="Form-control-sendMsg" value={this.state.message} onChange={(e) => this.handleChange('message', e)} />
             </div>
           </div>
           <div className="Form-group">
