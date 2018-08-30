@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Wedding Cake",
+    "moods":
+      ["relaxed, ",
+       "happy"
+      ],
+    "categories": "hybrid",
+    "dispensaries": "California Caregivers Alliance",
+    "strainURL": "",
+    "dispenURL": ""
+  },
+  {
+    "id": 2,
+    "name": "Blue Hawaiian",
+    "moods": "creative",
+    "categories": "sativa",
+    "dispensaries": "Cornerstone Research Collective"
+  },
+  {
+    "id": 3,
+    "name": "Jack Herer",
+    "moods": "happy",
+    "categories": "sativa",
+    "dispensaries": "",
+    "strainURL": "",
+    "dispenURL": ""
+  },
+  {
+    "id": 4,
+    "name": "Rock Bud",
+    "moods": "sleepy",
+    "categories": "indica",
+    "dispensaries": ""
+  },
+  {
+    "id": 5,
+    "name": "Blueberry Pie",
+    "moods": "hungry",
+    "categories": "hybrid",
+    "dispensaries": ""
+  },
+  {
+    "id": 6,
+    "name": "Purple Chemdawg",
+    "moods": "happy",
+    "categories": "indica",
+    "dispensaries": ""
+  }
+]

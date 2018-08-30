@@ -19,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Mount our custom auth middleware
 app.use(require('./config/auth'));
+app.use(twilioNotifications.notifyOnError);
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));

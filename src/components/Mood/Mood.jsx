@@ -13,8 +13,6 @@ class Mood extends Component {
     this.setState({ strain });
   }
 
-
-
   render() {
     return (
       <div className="Btns-div">

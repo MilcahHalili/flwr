@@ -1,12 +1,12 @@
-function filterHappy(event) {
-  return event.strain === "Jack Herer";
-}
+// function filterHappy(event) {
+//   return event.strain === "Jack Herer";
+// }
 
-function filterSleepy(event) {
-  return event.strain === "Rock Bud";
-}
+// function filterSleepy(event) {
+//   return event.strain === "Rock Bud";
+// }
 
-export default {
-  filterHappy,
-  filterSleepy
-}
+// export default {
+//   filterHappy,
+//   filterSleepy
+// }

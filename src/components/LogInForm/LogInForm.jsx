@@ -46,7 +46,7 @@ class LogInForm extends Component {
           </div>
           <div className="Form-group">
             <div className="Form-submit-div">
-              <button className="Form-submit-btn">log in</button>&nbsp;&nbsp;&nbsp;
+              <button className="Form-submit-btn">log in</button>
             </div>
           </div>
         </form>
