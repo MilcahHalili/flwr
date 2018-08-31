@@ -1,60 +1,38 @@
-const StrainsAPI = {
-  strains: [
-    {
-      id: 1,
-      name: "Wedding Cake",
-      moods:
-        ["relaxed, ",
-         "happy"
-        ],
-      categories: "hybrid",
-      dispensaries: "California Caregivers Alliance",
-      strainURL: "",
-      dispenURL: ""
-    },
-    {
-      id: 2,
-      name: "Blue Hawaiian",
-      moods: "creative",
-      categories: "sativa",
-      dispensaries: "Cornerstone Research Collective"
-    },
-    {
-      id: 3,
-      name: "Jack Herer",
-      moods: "happy",
-      categories: "sativa",
-      dispensaries: "",
-      strainURL: "",
-      dispenURL: ""
-    },
-    {
-      id: 4,
-      name: "Rock Bud",
-      moods: "sleepy",
-      categories: "indica",
-      dispensaries: ""
-    },
-    {
-      id: 5,
-      name: "Blueberry Pie",
-      moods: "hungry",
-      categories: "hybrid",
-      dispensaries: ""
-    },
-    {
-      id: 6,
-      name: "Purple Chemdawg",
-      moods: "happy",
-      categories: "indica",
-      dispensaries: ""
-    }
-  ],
-  all: function () { return this.strains },
-  get: function (id) {
-    const isStrain = d => d.id === id
-    return this.strains.find(isStrain)
-  }
+import tokenServ from './tokenServ';
+
+const BASE_URL = '/api/strains/';
+
+function addStrain(strain) {
+  var opts = getAuthReqOpts('POST');
+  opts.body = JSON.stringify(strain);
+  return fetch(BASE_URL, opts)
+    .then(res => {
+      if (res.ok) return res.json();
+      throw new Error('Strain was not created.');
+    })
+    .then(strain => strain);
 }
 
-export default StrainsAPI;
+function all() {
+  return fetch(BASE_URL)
+  .then(res => {
+    if (res.ok)return res.json();
+    throw new Error('Bad credentials');
+  })
+  .then(strains => strains);
+}
+
+function getAuthReqOpts(method) {
+  return {
+    method: method,
+    headers: new Headers({
+      'Authorization': 'Bearer ' + tokenServ.getToken(),
+      'Content-type': 'application/json'
+    })
+  };
+}
+
+export default {
+  addStrain,
+  all
+}

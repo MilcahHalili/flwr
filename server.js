@@ -18,10 +18,11 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Mount our custom auth middleware
-app.use(require('./config/auth'));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+app.use(require('./config/auth'));
+app.use('/api/strains', require('./routes/api/strains'));
 
 
 // The following "catch all" route is necessary for

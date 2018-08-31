@@ -1,12 +1,9 @@
-// function filterHappy(event) {
-//   return event.strain === "Jack Herer";
-// }
+import strainAPI from './strainsAPI';
 
-// function filterSleepy(event) {
-//   return event.strain === "Rock Bud";
-// }
+function addStrain(strain) {
+  return strainAPI.addStrain(strain)
+}
 
-// export default {
-//   filterHappy,
-//   filterSleepy
-// }
+export default {
+  addStrain
+}

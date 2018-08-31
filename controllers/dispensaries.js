@@ -4,13 +4,13 @@ var Strain = require('../models/strain');
 function create(req, res) {
   var dispensary = new Dispensary(req.body);
   dispensary.save(err => {
-    res.redirect('/dispensary/:dispensary_id');
+    res.redirect(`/dispensary/${strain.id}`);
   });
 }
 
 function show(req, res) {
   Dispensary.findById(req.params.id).populate('strains').exec((err, dispensary) => {
-    res.render('/dispensary/:dispensary_id', {pageTitle: dispensary.name, dispensary});
+    res.render('`/dispensary/${strain.id}`', {pageTitle: dispensary.name, dispensary});
   });
 }
 

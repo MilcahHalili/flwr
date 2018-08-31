@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import DispensaryForm from '../../components/DispensaryForm/DispensaryForm';
+import StrainForm from '../../components/StrainForm/StrainForm';
 
-class AddDispensaryView extends Component {
+class AddStrainView extends Component {
   constructor(props) {
     super(props);
     this.state = {messsage: ''}
@@ -14,10 +14,10 @@ class AddDispensaryView extends Component {
   render() {
   return (
     <div>
-      <DispensaryForm
+      <StrainForm
         {...this.props}
         updateMsg={this.updateMsg}
-        handleAddDispen={this.props.handleAddDispen}
+        handleAddStrain={this.props.handleAddStrain}
       />
       <p>{this.state.messsage}</p>
     </div>
@@ -25,4 +25,4 @@ class AddDispensaryView extends Component {
 }
 };
 
-export default AddDispensaryView;
+export default AddStrainView;

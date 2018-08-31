@@ -5,7 +5,7 @@ class Mood extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      strain: null
+      strains: []
     }
   }
 
