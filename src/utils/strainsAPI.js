@@ -18,10 +18,10 @@ function all() {
   .then(res => {
     if (res.ok)return res.json();
   })
+  .then(strains => strains)
   .catch(function() {
     console.log("handled the error");
-  })
-  .then(strains => strains);
+  });
 }
 
 function getAuthReqOpts(method) {

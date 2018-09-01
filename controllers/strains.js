@@ -2,11 +2,14 @@ var Strain = require('../models/strain');
 
 function addStrain(req, res) {
   req.body.categories = req.body.categories.replace(/\s*,\s*/g, ',');
-  // split if it's not an empty string
   if (req.body.categories) req.body.categories = req.body.categories.split(',');
+  if (req.body.categories) req.body.categories = req.body.categories.join(', ');
   req.body.moods = req.body.moods.replace(/\s*,\s*/g, ',');
-  // split if it's not an empty string
   if (req.body.moods) req.body.moods = req.body.moods.split(',');
+  if (req.body.moods) req.body.moods = req.body.moods.join(', ');
+  req.body.dispensaries = req.body.dispensaries.replace(/\s*,\s*/g, ',');
+  if (req.body.dispensaries) req.body.dispensaries = req.body.dispensaries.split(',');
+  if (req.body.dispensaries) req.body.dispensaries = req.body.dispensaries.join(', ');
   var strain = new Strain(req.body);
   strain.save(err => {
     res.json(strain);

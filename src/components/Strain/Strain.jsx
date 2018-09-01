@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../../views/App/App.css';
 
 const Strain = (props) => {
@@ -13,7 +14,8 @@ const Strain = (props) => {
         <p className="Strain-p">Categories:<br />
           {strain.categories}</p>
         <p className="Strain-p">Dispensaries:<br />
-          {strain.dispensaries}</p>
+          {strain.dispensaries}</p><br />
+        <Link to="/strains">BACK TO STRAINS</Link>
       </div>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import StrainForm from '../../components/StrainForm/StrainForm';
+import AddStrainForm from '../../components/AddStrainForm/AddStrainForm';
 
 class AddStrainView extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class AddStrainView extends Component {
   render() {
   return (
     <div>
-      <StrainForm
+      <AddStrainForm
         {...this.props}
         updateMsg={this.updateMsg}
         handleAddStrain={this.props.handleAddStrain}

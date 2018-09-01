@@ -9,7 +9,7 @@ class StrainForm extends Component {
       name: '',
       categories: '',
       moods: '',
-      infoURL: ''
+      dispensaries: ''
     };
   }
 
@@ -42,17 +42,17 @@ class StrainForm extends Component {
           </div>
           <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" className="Form-control" placeholder="indica, hybrid, sative, cbd" value={this.state.categories} onChange={(e) => this.handleChange('categories', e)} />
+              <input type="text" className="Form-control" placeholder="Category (i.e. hybrid)" value={this.state.categories} onChange={(e) => this.handleChange('categories', e)} />
             </div>
           </div>
           <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" className="Form-control" placeholder="happy, sleepy, creative" value={this.state.moods} onChange={(e) => this.handleChange('moods', e)} />
+              <input type="text" className="Form-control" placeholder="Moods (i.e. happy)" value={this.state.moods} onChange={(e) => this.handleChange('moods', e)} />
             </div>
           </div>
           <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" className="Form-control" placeholder="https://www.leafly.com/indica/purple-punch" value={this.state.infoURL} onChange={(e) => this.handleChange('infoURL', e)} />
+              <input type="text" className="Form-control" placeholder="Dispensaries" value={this.state.dispensaries} onChange={(e) => this.handleChange('dispensaries', e)} />
             </div>
           </div>
           <div className="Form-group">

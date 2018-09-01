@@ -8,7 +8,7 @@ var strainSchema = new Schema({
   },
   categories: [String],
   moods: [String],
-  infoURL: String
+  dispensaries: [String]
 }, {
     timestamps: true
 });

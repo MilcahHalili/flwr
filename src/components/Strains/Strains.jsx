@@ -13,7 +13,7 @@ const Strains = (props) => {
   ));
   return (
     <div>
-      <div>
+      <div className="Btns-div">
         <ul>
           {strains}
         </ul>
