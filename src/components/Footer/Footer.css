@@ -1,5 +1,6 @@
 .Footer {
   padding-top: 65px;
+  margin-bottom: -10%;
   bottom: 0;
   width: 100%;
 }
@@ -12,5 +13,5 @@
 .Footer-h2 {
   text-align: center;
   color: #FFFFFF;
-  font-size: 1.75em;
+  font-size: 1em;
 }

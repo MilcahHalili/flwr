@@ -9,10 +9,10 @@ const Nav = (props) => {
       <br />
       <div className="Nav-div">
         <nav className="Nav-bar">
+          <Link to='/strains' className='Nav-link' >strains</Link>
           <Link to='/category' className='Nav-link' >category</Link>
           <Link to='/mood' className='Nav-link' >mood</Link>
           <br />
-          <Link to='/strains' className='Nav-link' >strains</Link>
           <Link to='/addstrain' className='Nav-link' >add strain</Link>
           <Link to='/dispensaries' className='Nav-link' >dispensaries</Link>
           <br />
@@ -24,6 +24,8 @@ const Nav = (props) => {
     <div>
       <div className="Nav-div">
         <nav className="Nav-bar">
+          <Link to='/strains' className='Nav-link' >strains</Link>
+          <br />
           <Link to='/login' className='Nav-link'>log in</Link>
           <Link to='/signup' className='Nav-link'>sign up</Link>
         </nav>

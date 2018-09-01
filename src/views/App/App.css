@@ -1,13 +1,6 @@
 .h2 {
   color: #FFFFFF;
-  font-size: 3em;
-  text-align: center;
-}
-
-.Index-div {
-  padding-top: 2.5%;
-  padding-right: 3.5%;
-  margin: auto;
+  font-size: 2.5em;
   text-align: center;
 }
 
@@ -15,14 +8,6 @@ a {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 1.5em;
-}
-
-.Index-ul {
-  list-style-type: none;
-}
-
-li {
-  padding: .15%;
 }
 
 .cross {
@@ -43,4 +28,20 @@ li {
 
 .Strain-p {
   font-size: 1.5em;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+  justify-content: center;
+}
+
+ul li {
+  flex: 0 0 calc(30% - 10px);
+  margin: 5px;
+  padding: 5px 0;
+  text-align: center;
+  box-sizing: border-box;
 }

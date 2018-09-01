@@ -43,6 +43,7 @@
 }
 
 .Form-submit-btn {
+  /* box-sizing: border-box; */
   color: #FFFFFF;
   font-size: 2em;
   font-weight: bold;
