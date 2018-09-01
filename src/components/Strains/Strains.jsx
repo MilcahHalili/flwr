@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import strainsAPI from '../../utils/strainsAPI';
 import '../../views/App/App.css';
 
 const Strains = (props) => {

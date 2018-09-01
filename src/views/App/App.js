@@ -22,7 +22,6 @@ import Dispensaries from '../../components/Dispensaries/Dispensaries';
 import Strain from '../../components/Strain/Strain';
 import Strains from '../../components/Strains/Strains';
 import AddStrainView from '../AddStrainView/AddStrainView';
-import strainServ from '../../utils/strainServ';
 import strainAPI from '../../utils/strainsAPI';
 
 class App extends Component {

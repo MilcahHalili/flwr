@@ -17,7 +17,9 @@ function all() {
   return fetch(BASE_URL)
   .then(res => {
     if (res.ok)return res.json();
-    throw new Error('Bad credentials');
+  })
+  .catch(function() {
+    console.log("handled the error");
   })
   .then(strains => strains);
 }

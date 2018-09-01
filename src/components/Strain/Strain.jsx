@@ -1,5 +1,4 @@
 import React from 'react';
-import StrainAPI from '../../utils/strainsAPI';
 import '../../views/App/App.css';
 
 const Strain = (props) => {
