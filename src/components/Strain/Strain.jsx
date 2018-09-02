@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../views/App/App.css';
+import './Strain.css';
 
 const Strain = (props) => {
   var strain = props.getStrainById(props.match.params.id);
@@ -9,6 +10,9 @@ const Strain = (props) => {
     <div>
       <div className="Strain-div">
         <h2 className="h2">{strain.name}</h2>
+        <div className="Strain-img-cont">
+          <img className="Strain-img" src={strain.imgURL} />
+        </div>
         <p className="Strain-p">Moods:<br />
           {strain.moods}</p>
         <p className="Strain-p">Categories:<br />

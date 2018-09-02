@@ -13,6 +13,7 @@ var userSchema = new Schema({
   phone: {
     type: String,
     required: true,
+    unique: true
   },
   verified: {
     type: Boolean,

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import strainServ from '../../utils/strainServ';
 import '../Form/Form.css';
 
@@ -9,6 +9,7 @@ class StrainForm extends Component {
       name: '',
       categories: '',
       moods: '',
+      imgURL: '',
       dispensaries: ''
     };
   }
@@ -23,11 +24,11 @@ class StrainForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     strainServ.addStrain(this.state)
-    .then((strain) => {
-      this.props.handleAddStrain(strain);
-      this.props.history.push('/');
-    })
-    .catch(err => this.props.updateMsg(err.message));
+      .then((strain) => {
+        this.props.handleAddStrain(strain);
+        this.props.history.push('/');
+      })
+      .catch(err => this.props.updateMsg(err.message));
   }
 
   render() {
@@ -38,6 +39,11 @@ class StrainForm extends Component {
           <div className="Form-group">
             <div className="col-sm-12">
               <input type="text" className="Form-control" placeholder="Name" value={this.state.name} onChange={(e) => this.handleChange('name', e)} />
+            </div>
+          </div>
+          <div className="Form-group">
+            <div className="col-sm-12">
+              <input type="text" className="Form-control" placeholder="Image" value={this.state.imgURL} onChange={(e) => this.handleChange('imgURL', e)} />
             </div>
           </div>
           <div className="Form-group">

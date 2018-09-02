@@ -4,11 +4,20 @@ var Schema = mongoose.Schema;
 var strainSchema = new Schema({
   name: {
     type: String,
+    required: true,
+    unique: true
+  },
+  categories: {
+    type: [String],
     required: true
   },
-  categories: [String],
-  moods: [String],
-  dispensaries: [String]
+  moods: {
+    type: [String],
+    required: true
+  },
+  imgURL: String,
+  dispensaries: [String],
+
 }, {
     timestamps: true
 });

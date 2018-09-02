@@ -22,14 +22,6 @@ a {
   margin-bottom: 1%;
 }
 
-.Strain-div {
-  text-align: center;
-}
-
-.Strain-p {
-  font-size: 1.5em;
-}
-
 ul {
   display: flex;
   flex-wrap: wrap;
