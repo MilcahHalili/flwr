@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var dispensariesCtrl = require('../../controllers/dispensaries');
+var dispenCtrl = require('../../controllers/dispensaries');
 
 /*--- Public Routes ---*/
-router.post('/add-dispen', dispensariesCtrl.create);
-router.get('/dispensary/:id', dispensariesCtrl.show);
-router.post('/:dispensaryId/strains/:strainId', dispensariesCtrl.createStock);
-router.delete('/:dispensaryId/strains/:strainId', dispensariesCtrl.removeStock);
+router.post('/', dispenCtrl.create);
+router.get('/:id', dispenCtrl.show);
+router.get('/:id/strains/new', barsCtrl.newStock);
+router.post('/:dispenId/strains/:strainId', dispenCtrl.createStock);
+router.delete('/:dispenId/strains/:strainId', dispenCtrl.deleteStock);
 
 module.exports = router;

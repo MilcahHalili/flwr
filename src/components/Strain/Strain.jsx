@@ -11,7 +11,7 @@ const Strain = (props) => {
       <div className="Strain-div">
         <h2 className="h2">{strain.name}</h2>
         <div className="Strain-img-cont">
-          <img className="Strain-img" src={strain.imgURL} />
+          <img className="Strain-img" src={strain.imgURL} alt="cannabis" />
         </div>
         <p className="Strain-p">Moods:<br />
           {strain.moods}</p>

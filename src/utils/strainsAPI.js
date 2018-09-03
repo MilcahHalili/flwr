@@ -1,5 +1,4 @@
 import tokenServ from './tokenServ';
-
 const BASE_URL = '/api/strains/';
 
 function addStrain(strain) {
@@ -15,13 +14,13 @@ function addStrain(strain) {
 
 function all() {
   return fetch(BASE_URL)
-  .then(res => {
-    if (res.ok)return res.json();
-  })
-  .then(strains => strains)
-  .catch(function() {
-    console.log("handled the error");
-  });
+    .then(res => {
+      if (res.ok) return res.json();
+    })
+    .then(strains => strains)
+    .catch(function () {
+      console.log("Err");
+    });
 }
 
 function getAuthReqOpts(method) {
