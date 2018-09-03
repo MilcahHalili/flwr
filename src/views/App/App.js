@@ -31,7 +31,7 @@ class App extends Component {
       user: null,
       dispensary: this.dispensary,
       mood: this.mood,
-      strains: []
+      strains: [],
     };
   }
 
