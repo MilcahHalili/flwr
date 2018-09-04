@@ -11,7 +11,7 @@ const Category = () => {
       <Link to="/hybrid">
         <button className="giggly">hybrid</button>
       </Link>
-      <Link to="/sativa">
+      <Link to="/indica">
         <button className="calm">indica</button>
       </Link>
       {/* <button className="sleepy">cbd</button> */}
