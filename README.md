@@ -6,7 +6,7 @@ Descriptions of Future Enhancements.
 
 # flwr
 
-![flwr screenshot](https://i.imgur.com/0QPgqk5.png)
+![flwr screenshot](https://i.imgur.com/EIyKCE1.png)
 
 ## Description
 ### Why use flwr?
@@ -39,10 +39,14 @@ Sign up or log in to begin finding and adding rare strains.
 ## Next Steps
 ### *Bugs*
 
+The http url of the API causes a mixed content error. The user must allow content that is not secure on their web browser before the strains render.
+
 The unordered lists of strains arenn't fully aligned/centered.
 
 The next feature to build is sending text notifications to users as an admin/dispensary owner. While I started writing the code to initiate this feature, I wasn't able to move past the errors and complete it.
 
 ### *Build On!*
+
+Change the API to a secure API.
 
 Please refer to flwr's **[Ice Box] (https://trello.com/b/GP7Zlprn/flwr)** for suggestions on additional features.
