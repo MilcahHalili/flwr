@@ -1,13 +1,26 @@
+.App-logo {
+  height: 30%;
+  width: 30%;
+}
+
 .h2 {
   color: #FFFFFF;
   font-size: 2.5em;
   text-align: center;
 }
 
-a {
+.reg-font {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.75em
+}
+
+.strain-name{
+  font-size: 1.75em;
+}
+
+.strain-race {
+  font-size: 1.25em;
 }
 
 .cross {
@@ -20,20 +33,4 @@ a {
 .herb {
   font-size: 3em;
   margin-bottom: 1%;
-}
-
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding-left: 0;
-  justify-content: center;
-}
-
-ul li {
-  flex: 0 0 calc(30% - 10px);
-  margin: 5px;
-  padding: 5px 0;
-  text-align: center;
-  box-sizing: border-box;
 }

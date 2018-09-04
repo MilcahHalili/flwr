@@ -19,7 +19,7 @@ const Strain = (props) => {
           {strain.categories}</p>
         <p className="Strain-p">Dispensaries:<br />
           {strain.dispensaries}</p><br />
-        <Link to="/strains">BACK TO STRAINS</Link>
+        <Link className="Strain-back" to="/strains">BACK TO STRAINS</Link>
       </div>
     </div>
   )

@@ -5,9 +5,7 @@ const HomeView = () => {
   return (
     <div className="HomeView">
       <div>
-        Get notified when<br />
-        your favorite strains drop in<br />
-        your favorite dispensaries.
+        <img className="Home-discover" src="https://i.imgur.com/P5ue86l.png"/>
       </div>
     </div>
   )

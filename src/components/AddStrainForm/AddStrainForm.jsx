@@ -34,7 +34,12 @@ class StrainForm extends Component {
   render() {
     return (
       <div className="Form-div">
-        <header className="Form-header">add strain</header>
+        <header className="Form-header">
+          <p>
+            Can't find your favorite strain?
+          </p>
+          Add it here:
+        </header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="Form-group">
             <div className="col-sm-12">

@@ -10,19 +10,24 @@ import Footer from '../../components/Footer/Footer';
 import HomeView from '../HomeView/HomeView';
 import LogInView from '../LogInView/LogInView';
 import SignUpView from '../SignUpView/SignUpView';
-import SendMsgView from '../SendMsgView/SendMsgView';
 import userServ from '../../utils/userServ';
 import msgServ from '../../utils/msgServ';
 import Mood from '../../components/Mood/Mood';
 import Category from '../../components/Category/Category';
 import './App.css';
 import '../../components/Btns/Btns.css';
-import Dispensary from '../../components/Dispensary/Dispensary';
-import Dispensaries from '../../components/Dispensaries/Dispensaries';
 import Strain from '../../components/Strain/Strain';
 import Strains from '../../components/Strains/Strains';
 import AddStrainView from '../AddStrainView/AddStrainView';
 import strainAPI from '../../utils/strainsAPI';
+import Happy from '../../components/Happy/Happy';
+import Relaxed from '../../components/Relaxed/Relaxed';
+import Sleepy from '../../components/Sleepy/Sleepy';
+import Energetic from '../../components/Energetic/Energetic';
+import Sativa from '../../components/Sativa/Sativa';
+import Hybrid from '../../components/Hybrid/Hybrid';
+import Indica from '../../components/Indica/Indica';
+import AllStrains from '../../components/AllStrains/AllStrains';
 
 class App extends Component {
   constructor() {
@@ -94,8 +99,16 @@ class App extends Component {
             () =>
               <HomeView />
           } />
+          <Route exact path='/allstrains' component={AllStrains} />
           <Route exact path='/category' component={Category} />
+          <Route exact path='/sativa' component={Sativa} />
+          <Route exact path='/hybrid' component={Hybrid} />
+          <Route exact path='/indica' component={Indica} />
           <Route exact path="/mood" component={Mood} />
+          <Route exact path='/happy' component={Happy} />
+          <Route exact path='/energetic' component={Energetic} />
+          <Route exact path='/relaxed' component={Relaxed} />
+          <Route exact path='/sleepy' component={Sleepy} />
           <Route exact path='/login' render={(props) =>
             <LogInView
               {...props}
@@ -109,28 +122,16 @@ class App extends Component {
                 handleSignUp={this.handleSignUp}
               />
           } />
-          <Route exact path='/dispensaries' render={
-            (props) =>
-              <Dispensaries
-                {...props}
-              />
-          } />
           <Route exact path='/addstrain' render={
             (props) => (
-              this.state.user ? 
+              this.state.user ?
                 <AddStrainView
                   {...props}
                   handleAddStrain={this.handleAddStrain}
                 />
-              :
+                :
                 <Redirect to='/login' />
             )
-          } />
-          <Route exact path='/dispensary/:id' render={
-            (props) =>
-              <Dispensary
-                {...props}
-              />
           } />
           <Route exact path='/strains' render={
             (props) =>
@@ -144,13 +145,6 @@ class App extends Component {
               <Strain
                 {...props}
                 getStrainById={this.getStrainById}
-              />
-          } />
-          <Route exact path='/send/message' render={
-            (props) =>
-              <SendMsgView
-                {...props}
-                handleSendMsg={this.handleSendMsg}
               />
           } />
         </Switch>

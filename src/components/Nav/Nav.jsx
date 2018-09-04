@@ -9,14 +9,15 @@ const Nav = (props) => {
       <br />
       <div className="Nav-div">
         <nav className="Nav-bar">
-          <Link to='/strains' className='Nav-link' >strains</Link>
-          <Link to='/category' className='Nav-link' >category</Link>
-          <Link to='/mood' className='Nav-link' >mood</Link>
-          <br />
-          <Link to='/addstrain' className='Nav-link' >add strain</Link>
-          <Link to='/dispensaries' className='Nav-link' >dispensaries</Link>
-          <br />
+          <Link to='/strains' className='Nav-link' >rare strains</Link>
+          &nbsp;&nbsp;
+          <Link to='/addstrain' className='Nav-link' >add rare strain</Link>
+          &nbsp;&nbsp;
           <Link to='' className='Nav-link' onClick={props.handleLogout}>log out</Link>
+          <br />
+          <Link to='/category' className='Nav-link' >category</Link>
+          &nbsp;&nbsp;
+          <Link to='/mood' className='Nav-link' >mood</Link>
         </nav>
       </div>
     </div>
@@ -24,8 +25,6 @@ const Nav = (props) => {
     <div>
       <div className="Nav-div">
         <nav className="Nav-bar">
-          <Link to='/strains' className='Nav-link' >strains</Link>
-          <br />
           <Link to='/login' className='Nav-link'>log in</Link>
           <Link to='/signup' className='Nav-link'>sign up</Link>
         </nav>
