@@ -16,11 +16,14 @@ Discover new strains to fit your desired mood. Add rare strains that can't be fo
 - Express
 - MongoDB
 - Mongoose
+- mLab
 - ReactJS
 - Canva
 - The Strain API
 - Trello
 - VS Code
+- Northern Emeralds Photos
+- Chronik Stock Photo
 
 ## Getting Started
 
