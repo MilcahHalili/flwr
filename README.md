@@ -40,6 +40,8 @@ The http url of the API causes a mixed content error. The user must allow conten
 
 The unordered lists of strains arenn't fully aligned/centered.
 
+Change the colors to make them more unique from one another.
+
 The next feature to build is sending text notifications to users as an admin/dispensary owner. While I started writing the code to initiate this feature, I wasn't able to move past the errors and complete it.
 
 ### *Build On!*
