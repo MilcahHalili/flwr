@@ -14,7 +14,7 @@ class Relaxed extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://strainapi.evanbusse.com/cIYjVTQ/strains/search/effect/relaxed`)
+    fetch(`//strainapi.evanbusse.com/cIYjVTQ/strains/search/effect/relaxed`)
       .then(result => result.json())
       .then(strains => this.setState({ strains }))
   }

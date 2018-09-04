@@ -14,7 +14,7 @@ class Sativa extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://strainapi.evanbusse.com/cIYjVTQ/strains/search/race/sativa`)
+    fetch(`//strainapi.evanbusse.com/cIYjVTQ/strains/search/race/sativa`)
       .then(result => result.json())
       .then(strains => this.setState({ strains }))
   }

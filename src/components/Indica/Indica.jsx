@@ -14,7 +14,7 @@ class Indica extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://strainapi.evanbusse.com/cIYjVTQ/strains/search/race/indica`)
+    fetch(`//strainapi.evanbusse.com/cIYjVTQ/strains/search/race/indica`)
       .then(result => result.json())
       .then(strains => this.setState({ strains }))
   }

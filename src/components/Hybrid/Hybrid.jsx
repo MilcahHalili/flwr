@@ -14,7 +14,7 @@ class Hybrid extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://strainapi.evanbusse.com/cIYjVTQ/strains/search/race/hybrid`)
+    fetch(`//strainapi.evanbusse.com/cIYjVTQ/strains/search/race/hybrid`)
       .then(result => result.json())
       .then(strains => this.setState({ strains }))
   }

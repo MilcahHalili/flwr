@@ -14,7 +14,7 @@ class Happy extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://strainapi.evanbusse.com/cIYjVTQ/strains/search/effect/happy`)
+    fetch(`//strainapi.evanbusse.com/cIYjVTQ/strains/search/effect/happy`)
       .then(result => result.json())
       .then(strains => this.setState({ strains }))
   }

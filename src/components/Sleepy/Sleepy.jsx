@@ -14,7 +14,7 @@ class Sleepy extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://strainapi.evanbusse.com/cIYjVTQ/strains/search/effect/sleepy`)
+    fetch(`//strainapi.evanbusse.com/cIYjVTQ/strains/search/effect/sleepy`)
       .then(result => result.json())
       .then(strains => this.setState({ strains }))
   }
