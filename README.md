@@ -1,9 +1,3 @@
-Introduction to the app with a screenshot.
-List of the technologies used.
-Links to your Trello board and deployed app in a Getting Started section.
-Descriptions of any Unsolved Problems (if any).
-Descriptions of Future Enhancements.
-
 # flwr
 
 ![flwr screenshot](https://i.imgur.com/EIyKCE1.png)
