@@ -29,7 +29,7 @@ Discover new strains to fit your desired mood. Add rare strains that can't be fo
 
 Go to **[flwr] (https://flwr-app.herokuapp.com/).**
 
-## How to Use flwr
+### How to Use flwr
 
 Sign up or log in to begin finding and adding rare strains.
 
