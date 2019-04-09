@@ -23,14 +23,18 @@ class SignUpForm extends Component {
     });
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    userServ.signup(this.state)
-    .then(() => {
+    try {
+      await userServ.signup(this.state);
+      // Let <App> know a user has signed up!
       this.props.handleSignUp();
+      // Successfully signed up - show GamePage
       this.props.history.push('/');
-    })
-    .catch(err => this.props.updateMsg(err.message));
+    } catch (err) {
+      // Invalid user data (probably duplicate email)
+      this.props.updateMsg(err.message);
+    }
   }
 
   isFormInvalid() {
@@ -57,14 +61,14 @@ class SignUpForm extends Component {
           </div>
           <div className="Form-group">
             <div className="col-sm-12">
-              <select className="Form-control" value={this.state.countryCode} onChange={(e) => this.handleChange('countryCode', e)}>
+              <select className="Form-control" id='authy-countries' value={this.state.countryCode} onChange={(e) => this.handleChange('countryCode', e)}>
                 <option value="+1">USA</option>
               </select>
             </div>
           </div>
           <div className="Form-group">
             <div className="col-sm-12">
-              <input type="text" className="Form-control" placeholder="Mobile Phone" value={this.state.phone} onChange={(e) => this.handleChange('phone', e)} />
+              <input type="text" className="Form-control" placeholder="510-420-2470" value={this.state.phone} onChange={(e) => this.handleChange('phone', e)} />
             </div>
           </div>
           <div className="Form-group">

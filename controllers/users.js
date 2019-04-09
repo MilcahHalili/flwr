@@ -2,15 +2,16 @@ var User = require('../models/user');
 var jwt = require('jsonwebtoken');
 var SECRET = process.env.SECRET;
 
-function signup(req, res) {
-  var user = new User(req.body);
-  user.save()
-    .then(user => {
-      // sms message
-      res.json({token: createJWT(user)});
-    })
-    // Error handler if data invalid i.e. duplicate email
-    .catch(err => res.status(400).json(err));
+async function signup(req, res) {
+  const user = new User(req.body);
+  try {
+    await user.save();
+    const token = createJWT(user);
+    res.json({ token });
+  } catch (err) {
+    // Probably a duplicate email
+    res.status(400).json(err);
+  }
 }
 
 function login(req, res) {

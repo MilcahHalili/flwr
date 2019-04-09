@@ -6,6 +6,7 @@
 
 .sativa, .happy, .hybrid, .giggly, .indica, .calm, .cbd, .sleepy, .mc {
   text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+  border-radius: 2px;
   -webkit-border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),0 1px 3px rgba(0,0,0,0.4);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.3),0 1px 3px rgba(0,0,0,0.4);
@@ -72,5 +73,5 @@
   border-radius: 15px;
   background: rgb(75,204,40,1);
   padding: 10px 5px;
-  margin: 10px 10px;
+  margin: 10px 10px 2.5% 0;
 }
