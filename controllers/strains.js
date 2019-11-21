@@ -1,4 +1,5 @@
 var Strain = require('../models/strain');
+var User = require('../models/user');
 
 function addStrain(req, res) {
   req.body.categories = req.body.categories.replace(/\s*,\s*/g, ',');

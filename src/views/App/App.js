@@ -69,13 +69,6 @@ class App extends Component {
       strains: [...prevState.strains, strain]
     }));
   }
-  // handleAddDispen = () => {
-  //   this.setState({ dipensary: dispenServ.addDispen() });
-  // }
-
-  // handleHappy = () => {
-  //   this.setState({ mood: strainServ.filterHappy() });
-  // }
 
   /*--- lifecycle methods ---*/
 

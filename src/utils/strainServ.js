@@ -4,8 +4,6 @@ function addStrain(strain) {
   return strainAPI.addStrain(strain)
 }
 
-
-
 export default {
   addStrain
 }
