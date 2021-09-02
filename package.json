@@ -11,7 +11,7 @@
     "merge": "^1.2.1",
     "mongoose": "^5.4.19",
     "morgan": "^1.9.1",
-    "mpath": "^0.5.1",
+    "mpath": "^0.8.4",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
